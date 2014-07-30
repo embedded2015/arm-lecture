@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+extern int multiply(int a, int b);
+extern int multiplyadd(int a, int b, int c);
+
+int main(void)
+{
+	int a, b, c, d;
+	a = 2;
+	b = 3;
+	c = 4;
+	d = multiply(a,b);
+	printf("a * b is %d\n", d);
+	d = multiplyadd(a,b,c);
+	printf("a * b + c is %d\n", d);
+
+	return 0;
+}
+
