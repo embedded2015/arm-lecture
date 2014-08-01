@@ -20,5 +20,4 @@ clean:
 	rm -f $(objects) example1
 
 qemu: example1
-	qemu-arm -L /usr/arm-linux-gnueabihf ./example1
-	echo $$?
+	@sh cmd

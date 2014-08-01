@@ -1,0 +1,4 @@
+#!/bin/sh
+
+qemu-arm -L /usr/arm-linux-gnueabihf ./example1
+echo $?
