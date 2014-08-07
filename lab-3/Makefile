@@ -23,7 +23,8 @@ fibseq.o: fibseq.c
 clean:
 	rm -f $(objects) fibseq
 
-QEMU_CMD = qemu-arm -g 1234 -L /usr/arm-linux-gnueabihf ./fibseq
+QEMU_CMD = qemu-arm -x gdbscript -g 1234 -L /usr/arm-linux-gnueabihf ./fibseq &
 CMD = yes 9 | $(call QEMU_CMD) && sleep 1
 qemu: fibseq
-	$(call QEMU_CMD)
+	yes 7 | $(call QEMU_CMD)
+	arm-none-eabi-gdb fibseq
